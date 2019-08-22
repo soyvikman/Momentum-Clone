@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.resultados-clima{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+}
+
+.nombre-ciudad{
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+.temperatura-actual{
+    position: fixed;
+    bottom:0;
+    right: 0;
+}
