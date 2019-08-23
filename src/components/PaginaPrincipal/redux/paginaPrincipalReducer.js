@@ -3,7 +3,11 @@ const initialState = {
     temperaturaActual: '',
     autorImagen: '',
     tituloImagen:'',
-    urlImagen:''
+    urlImagen:'',
+    hora:'',
+    dia:'',
+    mes:'',
+    year:''
 }
 
 const paginaPrincipalReducer = (state=initialState, action) => {
@@ -13,6 +17,11 @@ const paginaPrincipalReducer = (state=initialState, action) => {
             console.log(action.value)
             estado.nombre = action.value.name;
             estado.temperaturaActual = action.value.main.temp;
+            estado.hora = new Date().getHours();
+            estado.minutos = new Date().getMinutes();
+            estado.dia = new Date().getDay();
+            estado.mes = new Date().getMonth();
+            estado.year = new Date().getFullYear();
             break
         case 'EJECUTANDO_NASA':
             console.log(action.value)

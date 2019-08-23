@@ -18,10 +18,34 @@
     position: fixed;
     top:0;
     left: 0;
+    font-size: 1.3em;
 }
 
 .temperatura-actual{
     position: fixed;
     bottom:0;
     right: 0;
+    font-size: 1.3em;
+}
+
+.nombre-imagen{
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.nombre-hora{
+    position:fixed;
+    left: 45%;
+    bottom: 50%;
+    font-size: 2.5em;
+}
+
+.nombre-fecha{
+    position:fixed;
+    left:42%;
+    bottom: 60%;
+    font-size: 2.5em;
 }
