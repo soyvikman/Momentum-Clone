@@ -12,12 +12,8 @@ class PaginaPrincipal extends Component {
             store.dispatch({type:'COORDENADAS_SAGA', value : {latitude: data.coords.latitude, longitude: data.coords.longitude}})
             store.dispatch({type: 'IMAGENES_NASA'})
         }
-
-        function error(){
-            alert('Please allow the geolocation')
-        }
         
-        navigator.geolocation.getCurrentPosition(success, error)
+        navigator.geolocation.getCurrentPosition(success)
         
     }
     
