@@ -3,7 +3,7 @@ import axios from 'axios'
 
 function* coordenadas(value){
    
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=`+value.value.latitude+`&lon=`+value.value.longitude+`&APPID=79ca51641055528c7f610557fc8f83e6&units=metric`
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=`+value.value.latitude+`&lon=`+value.value.longitude+`&APPID=79ca51641055528c7f610557fc8f83e6&units=metric`
     const data = yield(axios.get(url))
     console.log(data)
     yield delay(1000)
