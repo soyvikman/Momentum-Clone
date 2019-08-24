@@ -5,24 +5,26 @@ const initialState = {
     tituloImagen:'',
     urlImagen:'',
     hora:'',
-    dia:'',
-    mes:'',
-    year:''
+    fecha:''
+
 }
 
 const paginaPrincipalReducer = (state=initialState, action) => {
     const estado = {...state}
     switch(action.type){
         case 'EJECUTANDO_COORDENADAS':
-            console.log(action.value)
             estado.nombre = action.value.name;
             estado.temperaturaActual = action.value.main.temp;
-            estado.hora = new Date().getHours();
-            estado.minutos = new Date().getMinutes();
-            estado.dia = new Date().getDay();
-            estado.mes = new Date().getMonth();
-            estado.year = new Date().getFullYear();
-            break
+            estado.hora = new Date().getUTCHours();
+            estado.minutos = new Date().getUTCMinutes();
+            estado.hora = ("0" + estado.hora).slice(-2);
+            estado.minutos = ("0" + estado.minutos).slice(-2);
+            const options = {
+                weekday:'long', year:'numeric', month:'long', day:'numeric'
+            }
+            const today = new Date()
+            estado.fecha = today.toLocaleDateString('es-ES', options)
+            break;
         case 'EJECUTANDO_NASA':
             console.log(action.value)
             estado.autorImagen = action.value.data.copyright;

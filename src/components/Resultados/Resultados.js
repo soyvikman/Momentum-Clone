@@ -8,6 +8,7 @@ import './Resultados.css'
 
 class Resultados extends Component {
     render(props) {
+
         const remora = this.props.clima.estado.urlImagen
         return (
             <div className='resultados-clima' style={{backgroundImage: `url(${remora})`}}>
@@ -16,7 +17,7 @@ class Resultados extends Component {
                 <h2 className='nombre-imagen'>{this.props.clima.estado.autorImagen} - {this.props.clima.estado.tituloImagen}</h2>
                 <h2 className='nombre-hora'>{this.props.clima.estado.hora} : {this.props.clima.estado.minutos}
                 </h2>
-                <h2 className='nombre-fecha'>{this.props.clima.estado.dia}/{this.props.clima.estado.mes}/{this.props.clima.estado.year}
+                <h2 className='nombre-fecha'>{this.props.clima.estado.fecha}
                 </h2>
             </div>
         )
