@@ -23,7 +23,7 @@ const paginaPrincipalReducer = (state=initialState, action) => {
                 weekday:'long', year:'numeric', month:'long', day:'numeric'
             }
             const today = new Date()
-            estado.fecha = today.toLocaleDateString('es-ES', options)
+            estado.fecha = today.toLocaleDateString('en-US', options)
             break;
         case 'EJECUTANDO_NASA':
             console.log(action.value)
